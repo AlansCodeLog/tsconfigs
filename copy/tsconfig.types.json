@@ -1,0 +1,15 @@
+// see https://github.com/babel/babel/issues/9668
+{
+	"extends": "./tsconfig",
+	"compilerOptions": {
+		"outDir": "dist",
+		"declaration": true,
+		"emitDeclarationOnly": true,
+		"noEmit": false,
+		"allowJs": false,
+		"declarationMap": true,
+	},
+	"exclude": [
+		"tests/**/*.ts",
+	]
+}

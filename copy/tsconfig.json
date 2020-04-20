@@ -1,0 +1,22 @@
+{
+	"extends": "@alanscodelog/tsconfigs",
+	"compilerOptions": {
+		"baseUrl": ".",
+		"paths": {
+			"@/*": [ "src/*" ],
+			"@utils/*": [ "node_modules/@alanscodelog/utils/dist/*" ],
+		},
+	},
+	// "types" : [
+	// 	"jest",
+	// 	// "node" should be added as needed
+	// ],
+	"include": [
+		"src/**/*.ts",
+		"tests/**/*.ts",
+	],
+	"exclude": [
+		"dist",
+		"node_modules",
+	]
+}
