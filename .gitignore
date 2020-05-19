@@ -1,2 +1,8 @@
 node_modules
 *.log
+
+# used for quickly testing locally
+src
+# for testing release notes
+test*
+changelog*

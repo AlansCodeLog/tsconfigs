@@ -1,22 +1,32 @@
+// https://www.typescriptlang.org/v2/en/tsconfig
 {
+	// ./node_modules/@alanscodelog/tsconfigs/tsconfig.json
+	// https://github.com/AlansCodeLog/my-tsconfigs
 	"extends": "@alanscodelog/tsconfigs",
 	"compilerOptions": {
 		"baseUrl": ".",
+		// TOCONFIGURE
 		"paths": {
 			"@/*": [ "src/*" ],
-			"@utils/*": [ "node_modules/@alanscodelog/utils/dist/*" ],
+			// "@utils/*": [ "node_modules/@alanscodelog/utils/dist/*" ],
 		},
 	},
+	// TOCONFIGURE
 	// "types" : [
 	// 	"jest",
-	// 	// "node" should be added as needed
+	// 	"node",
 	// ],
+	// TOCONFIGURE - the libs are explicitly specified because otherwise typescript includes the dom by default
+	"lib": [
+		"esnext",
+		// "dom",
+	],
+	// TOCONFIGURE
 	"include": [
 		"src/**/*.ts",
 		"tests/**/*.ts",
 	],
+	// TOCONFIGURE
 	"exclude": [
-		"dist",
-		"node_modules",
 	]
 }

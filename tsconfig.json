@@ -19,13 +19,6 @@
 		"allowSyntheticDefaultImports": true,
 
 		"sourceMap": true,
-
-		"types": [
-			"jest",
-		],
-		"lib": [
-			"esnext"
-		],
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
 	}

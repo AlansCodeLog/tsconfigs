@@ -2,9 +2,10 @@ My typescript configs.
 
 
 ```
-yarn add -D @alanscodelog/tsconfigs && ./node_modules/@alanscodelog/tsconfigs/install.sh
+yarn add -D @alanscodelog/tsconfigs \
+&& ./node_modules/@alanscodelog/tsconfigs/install.sh
 ```
-Note: the second command will overwrite `tsconfig.json` and `tsconfig.types.json` if it exists.
+Note: The last command will overwrite `tsconfig.json` and `tsconfig.types.json` if it exists.
 
 # Manual Setup
 ```bash
@@ -24,4 +25,9 @@ Then add a script to the `package.json`:
 "scripts": {
 	"build:types": "npx tsc --project tsconfig.types.json"
 }
+```
+
+Search for `// TOCONFIGURE` comments to find the places the configs should be manually configured before using.
+```bash
+grep "// TOCONFIGURE" tsconfig.json tsconfig.types.json -H -n --color
 ```
