@@ -1,9 +1,10 @@
 {
 	"compilerOptions": {
+		// because I compile with babel
 		"target": "esnext",
 		"module": "esnext",
 
-		"noEmit": true, // I usually use babel
+		"noEmit": true, // again because of babel
 
 		"strict": true,
 
@@ -24,6 +25,8 @@
 		],
 		"lib": [
 			"esnext"
-		]
+		],
+		"skipLibCheck": true,
+		"forceConsistentCasingInFileNames": true,
 	}
 }
