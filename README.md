@@ -29,5 +29,5 @@ Then add a script to the `package.json`:
 
 Search for `// TOCONFIGURE` comments to find the places the configs should be manually configured before using.
 ```bash
-grep "// TOCONFIGURE" tsconfig.json tsconfig.types.json -H -n --color
+grep "// TOCONFIGURE" tsconfig.json tsconfig.types.json -H -n -A1 --color
 ```
