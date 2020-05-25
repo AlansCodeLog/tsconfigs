@@ -31,3 +31,7 @@ Search for `// TOCONFIGURE` comments to find the places the configs should be ma
 ```bash
 grep "// TOCONFIGURE" tsconfig.json tsconfig.types.json -H -n -A1 --color
 ```
+
+# Notes
+
+- While it's possible to extend from different configs, e.g. `@alanscodelog/tsconfigs/types` by placing a `tests.json` file, typescript doesn't allow extending from *multiple* configs, so in a project you can't, for example, extend from a modified `tsconfig.json` and `@alanscodelog/tsconfigs/types`. That's why the types config is copied instead.
