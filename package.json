@@ -3,8 +3,6 @@
 	"version": "0.0.0-semantically-released",
 	"description": "My typescript configs.",
 	"main": "tsconfig.json",
-	"author": "Alan <alanscodelog@gmail.com>",
-	"license": "MIT",
 	"devDependencies": {
 		"semantic-release": "^17.0.7",
 		"@semantic-release/changelog": "^5.0.1",
@@ -14,19 +12,15 @@
 		"@semantic-release/release-notes-generator": "^9.0.1",
 		"conventional-changelog-conventionalcommits": "^4.3.0"
 	},
-	"homepage": "https://github.com/AlansCodeLog/my-tsconfigs#readme",
-	"repository": {
-		"url": "https://github.com/AlansCodeLog/my-tsconfigs.git"
-	},
-	"bugs": {
-		"url": "https://github.com/AlansCodeLog/my-tsconfigs/issues"
-	},
 	"files": [
 		"README.md",
 		"tsconfig.json",
 		"install.sh",
 		"copy/*"
 	],
+	"author": "Alan <alanscodelog@gmail.com>",
+	"repository":"github:alanscodelog/my-tsconfigs",
+	"license": "MIT",
 	"publishConfig": {
 		"access": "public"
 	}
