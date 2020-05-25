@@ -8,14 +8,14 @@
 		// TOCONFIGURE
 		"paths": {
 			"@/*": [ "src/*" ],
-			// "@utils/*": [ "node_modules/@alanscodelog/utils/dist/*" ],
+			"@utils/*": [ "node_modules/@alanscodelog/utils/dist/*" ],
 		},
 	},
 	// TOCONFIGURE
-	// "types" : [
-	// 	"jest",
-	// 	"node",
-	// ],
+	"types" : [
+		"jest",
+		// "node",
+	],
 	// TOCONFIGURE - the libs are explicitly specified because otherwise typescript includes the dom by default
 	"lib": [
 		"esnext",
