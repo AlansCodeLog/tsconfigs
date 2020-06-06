@@ -3,6 +3,9 @@
 	"version": "0.0.0-semantically-released",
 	"description": "My typescript configs.",
 	"main": "tsconfig.json",
+	"scripts": {
+		"postinstall": "node postinstall.js"
+	},
 	"devDependencies": {
 		"semantic-release": "^17.0.7",
 		"@semantic-release/changelog": "^5.0.1",
