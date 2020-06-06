@@ -4,7 +4,13 @@
 	"description": "My typescript configs.",
 	"main": "tsconfig.json",
 	"scripts": {
+		"lint:commits": "npx commitlint --from $(git rev-list HEAD --not --remotes | tail -1)^ --to HEAD --verbose",
 		"postinstall": "node postinstall.js"
+	},
+	"husky": {
+		"hooks": {
+			"pre-push": "npm run lint:commits"
+		}
 	},
 	"devDependencies": {
 		"semantic-release": "^17.0.7",
@@ -13,17 +19,27 @@
 		"@semantic-release/github": "^7.0.5",
 		"@semantic-release/npm": "^7.0.5",
 		"@semantic-release/release-notes-generator": "^9.0.1",
-		"conventional-changelog-conventionalcommits": "^4.3.0"
+		"conventional-changelog-conventionalcommits": "^4.3.0",
+		"@alanscodelog/semantic-release-config": "^1.0.1",
+		"@alanscodelog/commitlint-config": "^1.0.0",
+		"commitlint": "^8.3.5"
 	},
+	"author": "Alan <alanscodelog@gmail.com>",
+	"repository": "https://github.com/alanscodelog/my-tsconfigs",
+	"license": "MIT",
 	"files": [
 		"README.md",
 		"tsconfig.json",
 		"install.sh",
 		"copy/*"
 	],
-	"author": "Alan <alanscodelog@gmail.com>",
-	"repository":"github:alanscodelog/my-tsconfigs",
-	"license": "MIT",
+	"release": { "extends": [ "@alanscodelog/semantic-release-config" ] },
+	"commitlint": { "extends": [ "@alanscodelog" ] },
+	"@comments": {
+		"scripts": {
+			"lint:commits": "Lints all unpushed commits in the active branch."
+		}
+	},
 	"publishConfig": {
 		"access": "public"
 	}

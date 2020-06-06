@@ -1,3 +1,7 @@
+[![Release](https://github.com/alanscodelog/my-tsconfigs/workflows/Release/badge.svg)](https://www.npmjs.com/package/@alanscodelog/tsconfigs)
+
+# Install
+
 My typescript configs.
 
 
