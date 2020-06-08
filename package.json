@@ -30,6 +30,7 @@
 	"files": [
 		"README.md",
 		"tsconfig.json",
+		"postinstall.js",
 		"install.sh",
 		"copy/*"
 	],
