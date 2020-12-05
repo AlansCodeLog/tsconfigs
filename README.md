@@ -27,9 +27,10 @@ or copy [this](https://github.com/AlansCodeLog/my-tsconfigs/blob/master/copy/tsc
 Then add a script to the `package.json`:
 ```json
 "scripts": {
-	"build:types": "npx tsc --project tsconfig.types.json"
+	"build:types": "npx tsc -p tsconfig.types.json && npx dts-alias -p tsconfig.types.json"
 }
 ```
+[dts-alias](https://github.com/AlansCodeLog/dts-alias) is a tiny cli utility I wrote to fix aliases in the generated types. See it for more details.
 
 Search for `// TOCONFIGURE` comments to find the places the configs should be manually configured before using.
 ```bash
