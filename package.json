@@ -5,24 +5,21 @@
 	"main": "tsconfig.json",
 	"scripts": {
 		"lint:commits": "npx commitlint --from $(git rev-list HEAD --not --remotes | tail -1)^ --to HEAD --verbose",
-		"postinstall": "node postinstall.js"
-	},
-	"husky": {
-		"hooks": {
-			"pre-push": "npm run lint:commits"
-		}
+		"postinstall": "node postinstall.js",
+		"prepare": "husky install"
 	},
 	"devDependencies": {
-		"semantic-release": "^17.3.0",
-		"@semantic-release/changelog": "^5.0.1",
-		"@semantic-release/commit-analyzer": "^8.0.1",
-		"@semantic-release/github": "^7.2.0",
-		"@semantic-release/npm": "^7.0.9",
-		"@semantic-release/release-notes-generator": "^9.0.1",
-		"conventional-changelog-conventionalcommits": "^4.5.0",
-		"@alanscodelog/semantic-release-config": "^1.0.1",
-		"@alanscodelog/commitlint-config": "^1.0.1",
-		"commitlint": "^11.0.0"
+		"semantic-release": "^18.0.0",
+		"@semantic-release/changelog": "^6.0.1",
+		"@semantic-release/commit-analyzer": "^9.0.1",
+		"@semantic-release/github": "^8.0.2",
+		"@semantic-release/npm": "^8.0.3",
+		"@semantic-release/release-notes-generator": "^10.0.2",
+		"conventional-changelog-conventionalcommits": "^4.6.1",
+		"@alanscodelog/semantic-release-config": "^2.0.0",
+		"@alanscodelog/commitlint-config": "^2.0.0",
+		"commitlint": "^14.1.0",
+		"husky":"7.0.4"
 	},
 	"author": "Alan <alanscodelog@gmail.com>",
 	"repository": "https://github.com/alanscodelog/my-tsconfigs",
@@ -36,6 +33,7 @@
 	],
 	"release": { "extends": [ "@alanscodelog/semantic-release-config" ] },
 	"commitlint": { "extends": [ "@alanscodelog" ] },
+	"engines": { "node": ">=14.0.0" },
 	"@comments": {
 		"scripts": {
 			"lint:commits": "Lints all unpushed commits in the active branch."
