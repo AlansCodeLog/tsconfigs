@@ -4,14 +4,17 @@
 	"extends": "./tsconfig",
 	"compilerOptions": {
 		"outDir": "dist",
+		"rootDir": "src",
 		"declaration": true,
 		"declarationMap": true,
 		"emitDeclarationOnly": true,
 		"noEmit": false,
 		"allowJs": false,
 	},
-	// TOCONFIGURE
 	"exclude": [
 		"tests/**/*.ts",
+		"*.ts",
+		"*.cjs",
+		"*.js"
 	]
 }
