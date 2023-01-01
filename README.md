@@ -1,4 +1,4 @@
-[![Release](https://github.com/alanscodelog/my-tsconfigs/workflows/Release/badge.svg)](https://www.npmjs.com/package/@alanscodelog/tsconfigs)
+[![Release](https://github.com/alanscodelog/tsconfigs/workflows/Release/badge.svg)](https://www.npmjs.com/package/@alanscodelog/tsconfigs)
 
 # Install
 
@@ -15,14 +15,14 @@ Note: The last command will overwrite `tsconfig.json` and `tsconfig.types.json` 
 ```bash
 cp ./node_modules/@alanscodelog/tsconfigs/copy/tsconfig.json tsconfig.json
 ```
-or copy [this](https://github.com/AlansCodeLog/my-tsconfigs/blob/master/copy/tsconfig.json) to `tsconfig.json`.
+or copy [this](https://github.com/AlansCodeLog/tsconfigs/blob/master/copy/tsconfig.json) to `tsconfig.json`.
 
 
 For generating types:
 ```bash
 cp ./node_modules/@alanscodelog/tsconfigs/copy/tsconfig.types.json tsconfig.types.json
 ```
-or copy [this](https://github.com/AlansCodeLog/my-tsconfigs/blob/master/copy/tsconfig.types.json) to `tsconfig.types.json`.
+or copy [this](https://github.com/AlansCodeLog/tsconfigs/blob/master/copy/tsconfig.types.json) to `tsconfig.types.json`.
 
 Then add a script to the `package.json`:
 ```json
