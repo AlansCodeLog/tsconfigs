@@ -12,7 +12,7 @@
 			// #awaiting typescript import remap support
 			// will not work for nuxt modules
 		}
-		},
+	},
 	"types" : [
 		// "node"
 	],
@@ -32,4 +32,7 @@
 	],
 	"exclude": [
 	],
+	"tsc-alias": {
+		"resolveFullPaths": true // for esm compatibility
+	}
 }
