@@ -22,7 +22,7 @@
 		"husky":"7.0.4"
 	},
 	"author": "Alan <alanscodelog@gmail.com>",
-	"repository": "https://github.com/alanscodelog/my-tsconfigs",
+	"repository": "https://github.com/alanscodelog/tsconfigs",
 	"license": "MIT",
 	"files": [
 		"README.md",
