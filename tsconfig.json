@@ -9,6 +9,7 @@
 
 		"strict": true,
 
+		"strictNullChecks": true,
 		"noUnusedLocals": false, // I set eslint to complain softly instead
 		"noImplicitReturns": true,
 		"noUnusedParameters": true,
