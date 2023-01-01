@@ -11,16 +11,11 @@
 			// "@/*": ["src/*", "src/*/index.js"],
 			// #awaiting typescript import remap support
 			// will not work for nuxt modules
-		}
+		},
+		"types" : [ /* "node" */ ],
+		// the libs are explicitly specified because otherwise typescript includes the dom by default
+		"lib": [ /* "dom", */ "esnext" ]
 	},
-	"types" : [
-		// "node"
-	],
-	// TOCONFIGURE - the libs are explicitly specified because otherwise typescript includes the dom by default
-	"lib": [
-		"esnext",
-		// "dom",
-	],
 	"include": [
 		"src/**/*.ts",
 		"src/**/*.vue",
