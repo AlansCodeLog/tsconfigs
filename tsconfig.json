@@ -22,7 +22,7 @@
 		"sourceMap": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
-		"importsNotUsedAsValues":"error"
+		"verbatimModuleSyntax":true
 	},
 	"tsc-alias": {
 		"resolveFullPaths": true // for esm compatibility
