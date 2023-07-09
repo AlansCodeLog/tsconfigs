@@ -4,7 +4,7 @@
 	"description": "My typescript configs.",
 	"main": "tsconfig.json",
 	"scripts": {
-		"lint:commits": "commitlint --from $(git rev-list HEAD --not --remotes | tail -1)^ --to HEAD --verbose",
+		"lint:commits": "commitlint --from $(git rev-list --max-parents=0 HEAD) --to HEAD --verbose",
 		"postinstall": "node postinstall.js",
 		"prepare": "husky install"
 	},
