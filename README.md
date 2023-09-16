@@ -9,13 +9,33 @@ My typescript configs.
 yarn add -D @alanscodelog/tsconfigs \
 && ./node_modules/@alanscodelog/tsconfigs/install.sh
 ```
-Note: The last command will overwrite `tsconfig.json` and `tsconfig.types.json` if it exists.
+Note: The last command will overwrite `tsconfig.json`, `tsconfig.types.json` and `tsconfig.eslint.json` if it exists.
 
 # Manual Setup
 ```bash
 cp ./node_modules/@alanscodelog/tsconfigs/copy/tsconfig.json tsconfig.json
 ```
 or copy [this](https://github.com/AlansCodeLog/tsconfigs/blob/master/copy/tsconfig.json) to `tsconfig.json`.
+
+
+For eslint:
+
+```bash
+cp ./node_modules/@alanscodelog/tsconfigs/copy/tsconfig.eslint. json tsconfig.eslint. json
+```
+or copy [this](https://github.com/AlansCodeLog/tsconfigs/blob/master/copy/tsconfig.eslint.json) to `tsconfig.eslint.json`.
+
+This has been seperated out into it's own config because eslint is driving me insane with it's file is not included in the tsconfig error.
+
+Eslint must be told to use this tsconfig instead:
+
+```js
+	parserOptions: {
+		parser: "@typescript-eslint/parser",
+		project: "tsconfig.eslint.json",
+		extraFileExtensions: ['.vue'], // fixes eslint not linting vue files
+	}
+```
 
 
 For generating types:
@@ -27,18 +47,9 @@ or copy [this](https://github.com/AlansCodeLog/tsconfigs/blob/master/copy/tsconf
 Then add a script to the `package.json`:
 ```json
 "scripts": {
-	"build:types": "tsc -p tsconfig.types.json && npm run build:types:fix",
-	"build:types:fix": "tsc-alias -p tsconfig.types.json --debug",
+	"build:types": "tsc -p tsconfig.types.json --emitDeclarationOnly && npm run build:types:fix",
+	"build:types:fix": "tsc-alias -p tsconfig.types.json --debug"
 }
 ```
 
 This requires installing tsc-alias.
-
-Search for `// TOCONFIGURE` comments to find the places the configs should be manually configured before using.
-```bash
-grep "// TOCONFIGURE" tsconfig.json tsconfig.types.json -H -n -A1 --color
-```
-
-# Notes
-
-- While it's possible to extend from different configs, e.g. `@alanscodelog/tsconfigs/types` by placing a `tests.json` file, typescript doesn't allow extending from *multiple* configs, so in a project you can't, for example, extend from a modified `tsconfig.json` and `@alanscodelog/tsconfigs/types`. That's why the types config is copied instead.

@@ -6,27 +6,18 @@
 	"compilerOptions": {
 		"outDir": "dist",
 		"baseUrl": "src",
-		"paths": {
-			// classic (non-esm) non-prefixed style paths unless refering to specific file (@/somefile.js, @/path/to/some/file.js)
-			// "@/*": ["src/*", "src/*/index.js"],
-			// #awaiting typescript import remap support
-			// will not work for nuxt modules
-		},
-		"types" : [ /* "node" */ ],
+		/* "types" : [ "node" ], */
 		// the libs are explicitly specified because otherwise typescript includes the dom by default
-		"lib": [ /* "dom", */ "esnext" ]
+		"lib": [
+			/* "dom", */
+			"esnext"
+		]
 	},
 	"include": [
 		"src/**/*.ts",
-		"src/**/*.vue",
-		"tests/**/*.ts",
-		// so eslint doesn't bother us, we don't build with tsc anyways, and to emit types, there's tsconfig.types.json
-		"*.ts",
-		"*.cjs",
-		"*.js"
+		"src/**/*.vue"
 	],
-	"exclude": [
-	],
+	"exclude": [],
 	"tsc-alias": {
 		"resolveFullPaths": true // for esm compatibility
 	}
