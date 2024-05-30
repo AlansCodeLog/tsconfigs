@@ -1,4 +1,5 @@
-[![Release](https://github.com/alanscodelog/tsconfigs/workflows/Release/badge.svg)](https://www.npmjs.com/package/@alanscodelog/tsconfigs)
+[![Release](https://github.com/alanscodelog/tsconfigs/actions/workflows/release.yml/badge.svg)](https://github.com/alanscodelog/tsconfigs/actions/workflows/release.yml)
+[![NPM Version (with latest tag)](https://img.shields.io/npm/v/%40alanscodelog%2Ftsconfigs/latest)](https://www.npmjs.com/package/@alanscodelog/tsconfigs/v/latest)
 
 # Install
 
