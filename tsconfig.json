@@ -22,7 +22,8 @@
 		"sourceMap": true,
 		"skipLibCheck": true,
 		"forceConsistentCasingInFileNames": true,
-		"verbatimModuleSyntax": true
+		"verbatimModuleSyntax": true,
+		"importsNotUsedAsValues": "remove", // workaround for https://github.com/microsoft/TypeScript/issues/53302 
 	},
 	"tsc-alias": {
 		"resolveFullPaths": true // for esm compatibility
