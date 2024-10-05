@@ -6,11 +6,11 @@
 	"scripts": {
 		"lint:commits": "commitlint --from $(git rev-list --max-parents=0 HEAD) --to HEAD --verbose",
 		"postinstall": "node postinstall.js",
-		"prepare": "husky install"
+		"prepare": "husky"
 	},
 	"devDependencies": {
-		"@alanscodelog/commitlint-config": "^2.0.0",
-		"@alanscodelog/semantic-release-config": "^3.0.0",
+		"@alanscodelog/commitlint-config": "^3.0.2",
+		"@alanscodelog/semantic-release-config": "^5.0.1",
 		"@semantic-release/changelog": "^6.0.3",
 		"@semantic-release/commit-analyzer": "^10.0.1",
 		"@semantic-release/github": "^9.0.3",
