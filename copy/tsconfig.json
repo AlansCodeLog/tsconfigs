@@ -16,8 +16,4 @@
 		"src/**/*.ts",
 		"src/**/*.vue"
 	],
-	"exclude": [],
-	"tsc-alias": {
-		"resolveFullPaths": true // for esm compatibility
-	}
 }
