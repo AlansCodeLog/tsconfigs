@@ -2,7 +2,11 @@
 	"name": "@alanscodelog/tsconfigs",
 	"version": "0.0.0-semantically-released",
 	"description": "My typescript configs.",
-	"main": "tsconfig.json",
+	"type": "module",
+	"module": "tsconfig.json",
+	"exports": {
+		".": "./tsconfig.json"
+	},
 	"scripts": {
 		"lint:commits": "commitlint --from $(git rev-list --max-parents=0 HEAD) --to HEAD --verbose",
 		"postinstall": "node postinstall.js",
