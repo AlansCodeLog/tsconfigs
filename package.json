@@ -1,6 +1,6 @@
 {
 	"name": "@alanscodelog/tsconfigs",
-	"version": "0.0.0-semantically-released",
+	"version": "5.0.0",
 	"description": "My typescript configs.",
 	"type": "module",
 	"module": "tsconfig.json",
