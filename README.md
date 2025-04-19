@@ -31,5 +31,3 @@ Then add a script to the `package.json`:
 	"build:types": "tsc -p tsconfig.types.json --emitDeclarationOnly",
 }
 ```
-
-This requires installing tsc-alias.
