@@ -27,4 +27,11 @@
 		"erasableSyntaxOnly": true,
 		"noUncheckedIndexedAccess": false
 	},
+	"vueCompilerOptions": {
+		"strictTemplates": true,
+		"fallthroughAttributes": true,
+		"checkUnknownComponents" : false, // is causing issues with fallthroughComponentNames
+		"fallthroughComponentNames": ["Transition", "KeepAlive", "Teleport", "Suspense"],
+		"dataAttributes": ["data-*"]
+	}
 }
